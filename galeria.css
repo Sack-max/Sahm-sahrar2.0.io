@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pompiere&family=Ribeye&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pompiere&family=Ribeye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pompiere&family=Ribeye&family=Rouge+Script&family=Story+Script&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -330,7 +327,7 @@ header{
 }   
     
 .card .front h3{
-    font-family: 'Indie Flower', cursive;;
+    font-family: "Story Script", sans-serif;
     position: absolute;
     bottom:0%;
     width:100%;
@@ -457,7 +454,7 @@ header{
     text-shadow:
      2px 2px 4px #5969D8,
       2px 2px 4px #5969D8;
-    font-family: 'Indie Flower', cursive;
+    font-family: "Story Script", sans-serif;
     margin-top: 20px;
     font-size: 50px;
     color:#1F1E73;
