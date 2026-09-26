@@ -206,17 +206,6 @@ header{
 /*botones- y sus animaciones (  esto NO SE  toca)*/
 }
 
-main p#Sack{
-    text-align:justify;
-    text-shadow: 2px 2px 4px #0500FF;
-    font-family: 'Indie Flower', cursive;
-    padding: 100px;
-    margin-top: 20px;
-    font-size: 30px;
-    color:#1F1E73;
-    max-width: 135ch;
-
-}
 
 /*.. fondos.. de los textos.. de la intro..*/
 
