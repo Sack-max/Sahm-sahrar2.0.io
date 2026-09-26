@@ -35,20 +35,6 @@ header{
         text-underline-offset: 2px;
         text-shadow:4px 3px 6px white;
     }
-        p sub{
-                font-family: 'Pompiere', cursive;
-        color: white;
-        font-size: 30px;
-        margin-left: 5px;
-        white-space: nowrap;
-        text-decoration-line: underline;
-        text-decoration-style: wavy;
-        text-decoration-color: white;
-        text-decoration-thickness: 2px;
-        text-underline-offset: 2px;
-        text-shadow:4px 4px 6px white;
-
-    }
     /*titulo de la pagina y es el estilo del.. nombre-*/
     /*botones- y sus animaciones (  esto NO SE  toca)*/
     #navegacion{
@@ -206,6 +192,17 @@ header{
 /*botones- y sus animaciones (  esto NO SE  toca)*/
 }
 
+main p#Sack{
+    text-align:justify;
+    text-shadow: 2px 2px 4px #0500FF;
+    font-family: 'Indie Flower', cursive;
+    padding: 100px;
+    margin-top: 20px;
+    font-size: 30px;
+    color:#1F1E73;
+    max-width: 135ch;
+
+}
 
 /*.. fondos.. de los textos.. de la intro..*/
 
@@ -213,7 +210,7 @@ header{
 /* Marco.. de La intro ..? eso creo */
 
 
-
+}
 /*animacion.. del color.. del titulo =(*/
 main section#banner{
     width: 100%;
