@@ -269,7 +269,11 @@ header{
     background-image: url('imagenes/margenlargo.png'),url('imagenes/margenlargod.png'),url(imagenes/abajo.png);
     background-repeat: repeat-y,repeat-y,no-repeat;
     background-position: left top,right top,100% 100%;
-    background-size: auto 100%, 99% auto, auto 100%;
+    
+    background-size:
+        auto 100%,
+        auto 100%,
+        99% auto;
 }
 .imagentexto{
     display: flow-root;
@@ -406,7 +410,11 @@ header{
     background-image: url('imagenes/margenlargo.png'),url('imagenes/margenlargod.png'),url('imagenes/abajo.png');
     background-repeat: repeat-y,repeat-y,no-repeat;
     background-position: left top,right top,100% 100%;
-    background-size: auto 100%, 99% auto, auto 100%;
+   
+    background-size:
+        auto 100%,
+        auto 100%,
+        99% auto;
 }
 
 footer .linea1,
