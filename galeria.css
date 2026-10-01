@@ -226,7 +226,7 @@ header{
     box-shadow:5px 10px 60px yellow;
   
 }
-#Intro{
+.Intro{
     position: relative;
     padding-left: 100px;
     padding-right: 130px;
@@ -239,29 +239,16 @@ header{
     /*background-color: purple;*/
     
 }
-#Explicacion{
+.Explicacion{
     padding-left:90px;
     padding-right:90px;
     background-image: url('imagenes/margenlargo.png'),url('imagenes/margenlargod.png'),url(imagenes/abajo.png);
     background-repeat: repeat-y,repeat-y,no-repeat;
     background-position: left top,right top,center bottom;
 }
-
-#coming{ 
-    padding-left: 90px; 
-    padding-right: 90px;
-    padding-bottom: 100px;
-
-    background-image: url('imagenes/margenlargo.png'),
-                      url('imagenes/margenlargod.png'),
-                      url('imagenes/abajo.png');
-
-    background-repeat: repeat-y, repeat-y, no-repeat;
-    background-position: left top, right top, center bottom;
-}
 #Todo{
     display: flex;
-    flex-wrap:wrap; /*nI PUTA IDEA de que hace Chido tu mamada we*/
+    flex-wrap:wrap; 
     align-items: center;
     justify-content: center; /*ubica los segmentos*/
     min-height: 100vh;
@@ -272,10 +259,11 @@ header{
 .card{
     position:relative;
     width: 400px;
-    height: 510px;
-    margin: 20px;
+    height: 610px;
+    margin: -160px 20px 20px ;
 }
 /*Esto define la carta*/
+/*Configuracion comun de ambas caras de las tarjetas*/
 .card .face{
     position: absolute;
     width: 100%;
@@ -283,112 +271,521 @@ header{
     backface-visibility:hidden;
     border-radius: 10px;
     overflow:visible;
-    transition: 1s;
+    transition: 1.5s;
     transform-style:preserve-3d;
 }
-.card .front{
+
+
+
+/* #region CARTA SACK´  {*/
+.sack{
+    text-align:left;
+    text-shadow:
+     2px 2px 4px #5969D8,
+     2px 2px 4px #5969D8;
+    font-family: "Story Script", sans-serif;
+    color:#1F1E73;
+    
+
+}
+.card .front.sack{
     transform:perspective(600px) rotateY(0deg);
-    box-shadow:0 10px 10px #000;
-    background-color:#195EB5;
+    box-shadow:
+    0 0 10px #30388F,
+    0 0 10px #30388F,
+    0 0 40px #5969D8,
+    0 0 30px rgba(89, 105, 216, 0.6);
+    background-color:#C5C9EA;
 
 }
 .card .front img{
     position:absolute;
     bottom:0%;
     width: 100%;
-    height:100%;
+    height:90%;
     object-fit: fill;
     border-radius:10px;
     backface-visibility:hidden;
     transform: translateZ(12px);
 
-}
-.card .front h3.Sahra{
+}    
+.card .front h3.sack{
     position: absolute;
     bottom:0%;
     width:100%;
     height:45px;
-    color:royalblue;
-    text-shadow:2px 3px 3px#2029D4;
-    background : rgba(146, 138, 138, 0.4);
-    text-align: center;
-    transform: translateZ(26px);
-    backface-visibility: hidden;
-    
-    text-align:center;
-    text-shadow: 
-    2px 2px 4px rgb(119, 11, 11),
-    2px 2px 4px rgb(119, 11, 11);
-    font-family: "Pompiere", sans-serif;
-    margin-top: 20px;
-    font-size: 40px;
-    color: rgba(58, 7, 7, 0.712);
-    max-width: 28ch;
-}   
-    
-.card .front h3{
-    font-family: "Story Script", sans-serif;
-    position: absolute;
-    bottom:0%;
-    width:100%;
-    height:45px;
-    color:royalblue;
-    text-shadow:2px 3px 3px#2029D4;
-    background : rgba(146, 138, 138, 0.4);
+    font-size: 35px;
+    background : rgba(31, 18, 78, 0.4);
+    border-radius:20px;
+    border: 3px dashed  #4B55B8;
     text-align: center;
     transform: translateZ(26px);
     backface-visibility: hidden;
 }
-.card .back{
+.card .front p.sack{
+   font-size: 20px;
+   margin-bottom:10px;
+   max-width: 40ch;
+   border: 3px dashed  #4B55B8;
+
+}
+.card .back.sack{
     transform: perspective(600px) rotateY(100deg);
-    background: rgb(128,163,183); /*Color parte de atras*/
-    padding:15px;
+    background-color:#C5C9EA;
+    box-shadow:
+    0 0 10px #30388F,
+    0 0 10px #30388F,
+    0 0 40px #5969D8,
+    0 0 30px rgba(89, 105, 216, 0.6);
+    box-sizing: border-box;
+    padding:25px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     text-align: center;
-    box-shadow: 0px 5px 10px blak;
 
 }
-.card .back .link{
-    border-top:solid 1px #f3f3f3;
-    height:30px;
-    line-height: 50px;
-    color:#f3f3f3;
+.card .back h3.sack{
+    font-size: 30px;
+    margin-top:30px;
+    letter-spacing: 2px;
+     transform: translateZ(90px) translateX(2px);
+    backface-visibility: hidden;
+   font-size: 20px;
+   margin-bottom:10px;
+   max-width: 40ch;
+   padding: 9px;
+   background : rgba(31, 18, 78, 0.4);
+   border-radius: 20px;
+
+    
+}
+.card .back p.TextoC{
+      
+    text-shadow: 2px 2px 4px #333333;
+    font-family: 'Indie Flower', cursive;
+   
+    font-size: 20px;
+    color:black;
+    transform: translateZ(50px) translateY(-20px);
+    backface-visibility: hidden;
+    max-width: 90ch;   
+
+    border: 3px dashed #333333;
+    border-radius: 20px;
+    padding:0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: fit-content;
+
+}
+.card .back p.sack{
+    
+   
+    font-size: 15px;
+    transform: translateZ(50px) translateY(-20px);
+    backface-visibility: hidden;
+    max-width: 190ch;   
+    padding: 10px;
+    border: 3px dashed  #4B55B8;
+    border-radius: 20px;
+    background : rgba(31, 18, 78, 0.4);
+    width: fit-content;
+
+}
+
+
+.card .back .link.sack{
+    border-top:solid 1px #030114;
+    height:3px;
+    line-height: 90px;
     transform:translateZ(40px);
     backface-visibility:hidden;
 }
-.card .back a{
-    display:inline-block;
+
+.card .back a.linkSk {
+    font-size: 30px;
     transform: translateZ(40px);
     backface-visibility: hidden;
 }
-.card .back h3{
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: 2px;
-     transform: translateZ(90px);
-    backface-visibility: hidden;
-}
-.card .front p{
-   font-family: 'Indie Flower', cursive;
-   color:#85ECFF;
-   text-shadow: 2px 2px 4px #23474F;
-   font-size:16px;
-   margin-bottom:10px;
+/* #endregion */
+/* #region CARTA sahm {*/
+.sahm{
+    text-align:left;
+    text-shadow: 
+    2px 2px 1px #0077A8,
+    2px 2px 1px #0077A8;
+    font-family: 'Indie Flower', cursive;
+    color:#85ECFF;
+    
 
 }
-.card .back p{
-    letter-spacing: 1px;
-    transform: translateZ(90px);
+.card .front.sahm{
+    transform:perspective(600px) rotateY(0deg);
+    box-shadow: 
+    0 0 10px #0077A8,
+    0 0 10px #0077A8,
+    0 0 40px#00D9FF,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    background-color:#D3EAFC;
+
+}
+
+.card .front h3.sahm{
+    position: absolute;
+    bottom:0%;
+    width:100%;
+    height:45px;
+    font-size: 35px;
+    background : rgba(31, 18, 78, 0.4);
+    border-radius:20px;
+    border: 3px dashed #85ECFF;
+    text-align: center;
+    transform: translateZ(26px);
     backface-visibility: hidden;
 }
+.card .front p.sahm{
+   font-size: 20px;
+   margin-bottom:10px;
+   max-width: 50ch;
+   border: 3px dashed #85ECFF;
+
+}
+.card .back.sahm{
+    transform: perspective(600px) rotateY(100deg);
+    background-color:#D3EAFC;
+    box-shadow:
+    0 0 10px #0077A8,
+    0 0 10px #0077A8,
+    0 0 40px#00D9FF,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    box-sizing: border-box;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align: center;
+
+}
+.card .back h3.sahm{
+    font-size: 30px;
+    margin-top:30px;
+    letter-spacing: 2px;
+     transform: translateZ(90px) translateX(2px);
+    backface-visibility: hidden;
+   font-size: 20px;
+   margin-bottom:10px;
+   max-width: 40ch;
+   padding: 9px;
+   background : rgba(31, 18, 78, 0.4);
+   border-radius: 20px;
+
+    
+}
+
+.card .back p.sahm{
+    
+   
+    font-size: 15px;
+    transform: translateZ(50px) translateY(-20px);
+    backface-visibility: hidden;
+    max-width: 190ch;   
+    padding: 10px;
+    border: 3px dashed #85ECFF;
+    border-radius: 20px;
+    background : rgba(31, 18, 78, 0.4);
+    width: fit-content;
+
+}
+
+
+.card .back .link.sahm{
+    border-top:solid 1px #053142;
+    height:3px;
+    line-height: 90px;
+    transform:translateZ(40px);
+    backface-visibility:hidden;
+}
+
+.card .back a.linkShm{
+    text-shadow: 
+    3px 3px 1px #0077A8,
+    3px 3px 2px #0077A8;
+    font-family: 'Indie Flower', cursive;
+    color:#85ECFF;
+
+    font-size: 30px;
+    transform: translateZ(40px);
+    backface-visibility: hidden;
+}
+/* #endregion */
+/* #region CARTA sahra´{*/
+
+.sahra{
+    text-align:left;
+    text-shadow: 
+    2px 2px 4px rgb(119, 11, 11),
+    2px 2px 4px rgb(119, 11, 11);
+    font-family: "Pompiere", sans-serif;
+    
+    
+
+}
+.card .front.sahra{
+    transform:perspective(600px) rotateY(0deg);
+    box-shadow:
+    0 0 10px #77243C,
+    0 0 10px #77243C,
+    0 0 40px #BD1E1E,
+    0 0 30px rgba(255, 0, 0, 0.7);
+    background-color:#DE494E;
+}
+
+.card .front h3.sahra{
+    position: absolute;
+    bottom:0%;
+    width:100%;
+    height:45px;
+    font-size: 35px;
+    background : rgba(31, 18, 78, 0.4);
+    border-radius:20px;
+    border: 3px dashed  #BD1E1E;
+    text-align: center;
+    transform: translateZ(26px);
+    backface-visibility: hidden;
+}
+.card .front p.sahra{
+   font-size: 20px;
+   margin-bottom:10px;
+   max-width: 50ch;
+   border: 3px dashed  #BD1E1E;
+
+}
+.card .back.sahra{
+    transform: perspective(600px) rotateY(100deg);
+    background-color:#DE494E;
+    box-shadow:
+     0 0 10px #77243C,
+    0 0 10px #77243C,
+    0 0 40px #BD1E1E,
+    0 0 30px rgba(255, 0, 0, 0.7);
+    box-sizing: border-box;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align: center;
+
+}
+.card .back h3.sahra{
+    font-size: 30px;
+    margin-top:30px;
+    letter-spacing: 2px;
+     transform: translateZ(90px) translateX(2px);
+    backface-visibility: hidden;
+   font-size: 20px;
+   margin-bottom:10px;
+   max-width: 40ch;
+   padding: 9px;
+   background : rgba(31, 18, 78, 0.4);
+   border-radius: 20px;
+
+    
+}
+
+.card .back p.sahra{
+    
+   
+    font-size: 20px;
+    transform: translateZ(50px) translateY(-20px);
+    backface-visibility: hidden;
+    max-width: 190ch;   
+    padding: 10px;
+    border: 3px dashed  #BD1E1E;
+    border-radius: 20px;
+    background : rgba(31, 18, 78, 0.4);
+    width: fit-content;
+
+}
+
+
+.card .back .link.sahra{
+    border-top:solid 1px #420505;
+    height:3px;
+    line-height: 90px;
+    transform:translateZ(40px);
+    backface-visibility:hidden;
+}
+
+.card .back a.linkSahr{
+     text-shadow: 
+    2px 2px 4px rgb(119, 11, 11),
+    2px 2px 4px rgb(119, 11, 11);
+    font-family: "Pompiere", sans-serif;
+    color: black;
+    font-size: 30px;
+    transform: translateZ(40px);
+    backface-visibility: hidden;
+}
+/* #endregion */
+.Galeria {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    gap:30px;
+    height:auto;
+
+}
+.dibujo{
+    
+    border-radius:30px;
+    transform-origin: top center;
+    transition:all 3s ease-in-out;
+    flex:1;
+    height: 600px;
+    margin-bottom:170px;
+}
+.fila {
+    display: flex;
+    width: 100%;
+}
+.dibujo img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    padding:20px;
+    border: 3px dashed #333333;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition:all 1s ease-in-out;
+}
+.info-dibujo{
+    max-width: 70ch;
+    max-height: 70ch;
+    border: 3px dashed #333333;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:20px;
+    transition: all 0.5s ease-in-out;
+    opacity:0;
+    pointer-events: none;
+    width: fit-content;
+    position:absolute
+}
+.MarcoSahm{
+    border: 3px dashed #85ECFF;
+    border-radius: 20px;  
+    margin:10px;
+    width: fit-content;
+    box-shadow: 
+    0 0 10px #0077A8,
+    0 0 10px #0077A8,
+    0 0 40px#00D9FF,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    background-color:#D3EAFC;
+    padding:10px;
+}
+.MarcoSack{
+    border: 3px dashed  #4B55B8;
+    border-radius: 20px;
+    margin:10px;
+    width: fit-content;
+    box-shadow:
+    0 0 10px #30388F,
+    0 0 10px #30388F,
+    0 0 40px #5969D8,
+    0 0 30px rgba(89, 105, 216, 0.6);
+    background-color:#C5C9EA;
+    padding:10px;
+}
+
+.MarcoSahra1{
+    border: 3px dashed  #BD1E1E;
+    border-radius: 20px;
+    margin:10px;
+    width: fit-content;
+    box-shadow:
+    0 0 10px #77243C,
+    0 0 10px #77243C,
+    0 0 40px #BD1E1E,
+    0 0 30px rgba(255, 0, 0, 0.7);
+    background-color:#DE494E;
+    padding:10px;
+}
+
+.dibujo:hover{
+    object-fit:contain;
+    height: fit-content;
+    flex:1.7;
+
+    
+}
+.imagen-dibujo:hover + .info-dibujo.one{
+    
+    transform: translate(750px, -620px) scale(1.2,1.2);
+    opacity: 1;
+}
+
+.imagen-dibujo:hover + .info-dibujo.two{
+    transform: translate(550px, -420px) scale(1.2,1.2);
+    opacity: 1;
+}
+.imagen-dibujo:hover + .info-dibujo.tree{
+    transform: translate(-450px,-420px) scale(1.2,1.2);
+    opacity: 1;
+}
+
+.dibujo:hover img {
+    object-fit: contain;
+}
+#GRITOSAHRA{
+    color:#FF0000;
+    text-shadow: 
+     2px 2px 4px rgb(0, 0, 0),
+     2px 2px 4px rgb(0, 0, 0);
+}
+
+.melancolia{
+    color:#819eaa;
+    text-shadow: 
+     2px 2px 4px rgb(0, 0, 0),
+     2px 2px 4px rgb(0, 0, 0);
+    border: 3px dashed #85acff;
+    border-radius: 20px;  
+    margin:10px;
+    width: fit-content;
+    box-shadow: 
+    0 0 10px #0077A8,
+    0 0 10px #0077A8,
+    0 0 40px#00D9FF,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    background-color:#530aff;
+    padding:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 .card:hover .front{
     transform: perspective(600px) rotatey(180deg);
 }
 .card:hover .back{
     transform: perspective(600px) rotatey(360deg);
 }
+
+
+
+
+
+
 .Sahra{
     width: 100%;
     text-align:left;
@@ -399,17 +796,19 @@ header{
     margin-top: 20px;
     font-size: 40px;
     color: rgba(0, 0, 0, 0.712);
-    max-width: 28ch;
+    max-width: 50ch;
 }
+
 
 .MarcoSahra.right{
     text-align: right;
+    max-width: 40ch;
 }
 .MarcoSahra{
     border: 3px dashed  #BD1E1E;
     border-radius: 20px;
     padding: 20px;
-
+    
     box-shadow:
     0 0 10px #77243C,
     0 0 10px #77243C,
@@ -443,20 +842,33 @@ header{
     0 0 30px rgba(89, 105, 216, 0.6);
     background-color:#C5C9EA;
 }
-#coming{
-    text-align: center;
-    margin: 20px auto;
-    text-align: center;
 
-}   
-#coming .Sack{
-    text-align:justify;
-    text-shadow:
-     2px 2px 4px #5969D8,
-      2px 2px 4px #5969D8;
-    font-family: "Story Script", sans-serif;
-    margin-top: 20px;
-    font-size: 50px;
-    color:#1F1E73;
-    max-width: 100ch;
+.fila{
+    background-image: url('imagenes/abajo.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
+.titulodibujos{
+    font-family: 'Pompiere', cursive;
+    color: white;
+    font-size: 60px;
+    margin-left: 5px;
+    white-space: nowrap;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: white;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    text-shadow:4px 3px 6px white;
+
+}
+footer{
+    .Intro{
+        margin-top:300px;
+    }
+
+}
+.foter{
+    max-width: 100%;
 }
