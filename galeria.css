@@ -643,7 +643,7 @@ header{
     transform-origin: top center;
     transition:all 3s ease-in-out;
     flex:1;
-    height: 600px;
+    height: 400px;
     margin-bottom:170px;
 }
 .fila {
@@ -662,7 +662,7 @@ header{
 }
 .info-dibujo{
     max-width: 70ch;
-    max-height: 70ch;
+    max-height: 80ch;
     border: 3px dashed #333333;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -699,7 +699,9 @@ header{
     background-color:#C5C9EA;
     padding:10px;
 }
-
+.sahra.MarcoSahra1 {
+    width: fit-content;
+}
 .MarcoSahra1{
     border: 3px dashed  #BD1E1E;
     border-radius: 20px;
@@ -717,7 +719,7 @@ header{
 .dibujo:hover{
     object-fit:contain;
     height: fit-content;
-    flex:1.7;
+    flex:1.5;
 
     
 }
@@ -728,7 +730,7 @@ header{
 }
 
 .imagen-dibujo:hover + .info-dibujo.two{
-    transform: translate(550px, -420px) scale(1.2,1.2);
+    transform: translate(250px, -420px) scale(1,1);
     opacity: 1;
 }
 .imagen-dibujo:hover + .info-dibujo.tree{
@@ -763,17 +765,86 @@ header{
     background-color:#530aff;
     padding:10px;
 }
-.Alegría{
+.Alegria{
+    color:#f2ff38;
+    text-shadow: 
+     2px 2px 4px rgb(117, 188, 255),
+     2px 2px 4px rgb(48, 155, 255);
+    border: 3px dashed #caff85;
+    border-radius: 20px;  
+    margin:10px;
+    width: fit-content;
+    box-shadow: 
+    0 0 10px #a8a500,
+    0 0 10px #a8a500,
+    0 0 40px#d9ff00,
+     0 0 30px rgba(217, 255, 0, 0.7);
+    background-color:#fdffe5;
+    padding:10px;
 
 }
-
 .alegría{
+    text-shadow: 
+     2px 2px 4px rgb(117, 188, 255),
+     2px 2px 4px rgb(48, 155, 255);
+    color:#f2ff38;
+}
+.Verguenza{
+    color:#fc07df;
+        text-shadow: 
+     2px 2px 4px rgb(117, 188, 255),
+     2px 2px 4px rgb(48, 155, 255);
+    border: 3px dashed #fc07df;
+    border-radius: 20px;  
+    margin:10px;
+    width: fit-content;
+    box-shadow: 
+    0 0 10px #7300a8,
+    0 0 10px #7300a8,
+    0 0 40px#ff00aa,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    background-color:#ff8ce6;
+    padding:10px;
+}
+.Amabilidad{
+    color:#07fc28;
+        text-shadow: 
+     2px 2px 4px rgb(117, 255, 191),
+     2px 2px 4px rgb(14, 48, 10);
+    border: 3px dashed #07fc59;
+    border-radius: 20px;  
+    margin:10px;
+    width: fit-content;
+    box-shadow: 
+    0 0 10px #00a846,
+    0 0 10px #001fa8,
+    0 0 40px #00a846,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    background-color:#b7e9bd;
+    padding:10px;
+}
 
+.verguenza{
+    color:#fc07df;
+            text-shadow: 
+     2px 2px 4px rgb(117, 188, 255),
+     2px 2px 4px rgb(48, 155, 255);
+    
 }
 
 
-
-
+.sahra{
+    width: 100%;
+    text-align:left;
+    text-shadow: 
+    2px 2px 4px rgb(119, 11, 11),
+    2px 2px 4px rgb(119, 11, 11);
+    font-family: "Pompiere", sans-serif;
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.712);
+    max-width: 50ch;
+}
 
 
 
@@ -805,7 +876,6 @@ header{
     max-width: 50ch;
 }
 
-
 .MarcoSahra.right{
     text-align: right;
     max-width: 40ch;
@@ -821,9 +891,6 @@ header{
     0 0 40px #BD1E1E,
     0 0 30px rgba(255, 0, 0, 0.7);
     background-color:#DE494E;
-}
-.Sahra{
-    max-width: none;
 }
 
 .MarcoSahra{
