@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pompiere&family=Ribeye&family=Rouge+Script&family=Story+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: cornflowerblue;
+}
+header{
+    
+    position:fixed;
+    /*Especifica como esta posicionado el elemento respecto
+    al flujo normal de la pagina. Se puede mover con variables como
+    top right left bottom y posee las variables de static
+    fixed relative y absolute.
+
+    Static= default
+
+    relative: El elemento es posicionado de acuerdo
+     al flujo normal del documento, y luego es desplazado 
+     con relación a sí mismo con base en los valores de top, 
+     right, bottom, and left
+
+     absolute: El elemento es removido del flujo normal del documento,
+      sin crearse espacio alguno para el elemento en el esquema
+       de la página. Es posicionado relativo a su ancestro posicionado más 
+       cercano, si lo hay; de lo contrario, se ubica relativo al bloque 
+       contenedor inicial.
+
+       fixed: El elemento es removido del flujo normal del documento,
+        sin crearse espacio alguno para el elemento en el esquema de 
+        la página. Es posicionado con relación al bloque contenedor 
+        inicial establecido ) Interpreta esto como que fija.
+        la propiedad a que se muestre Siempre.
+        independiente del scroll
+        
+        sticky: Es parecido a fixed. pero este no mantiene propiedades como
+        la separacion del top.
+        crea una ilucion mas de que.. el scroll
+        esta arrastrando el elemento
+        */
+    z-index:100;
+    gap: 1;
+    display:flex;
+    /*Formalmente
+     la propiedad display establece los tipos de visualización interna
+      y externa de un elemento. La tipo externa establece la participacion 
+      de un elemento en flow layout; la tipo interna establece el layout(Diseño)
+       de los hijos.*/
+    width:100%;/*Ancho*/
+    height:114px;/*Alto.*/
+    background-color: dodgerblue;/*Color del Fondo*/
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow:5px 10px 60px rgba(123, 221, 255, 0.8);
+    #tituloysub{
+        display:flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    /*La propiedad CSS align-items
+     establece el valor align-self sobre todos los descendientes
+      directos de un grupo. La propiedad align-self indica la alineación 
+      de un elemento dentro del bloque que lo contiene*/
+      p{
+        margin-top:20px;
+      }
+      p sub{
+        font-family: 'Pompiere', cursive;/*Fuente de la letra*/
+        color: white;/*Color de la letra*/
+        font-size: 30px;/*tamaño de la letra*/
+        margin-left: 15px;/*margen desde la derecha*/
+        white-space: nowrap;/*determina cómo se maneja el espacio
+         en blanco dentro de un elemento
+         (en este caso suprime saltos de linea del origen)*/
+
+        text-decoration-line: underline;
+        /* se usa para establecer el formato de texto a subrayado*/
+
+        text-decoration-style: wavy;/*establece el tipo de decoración 
+        que se utiliza en el texto de un elemento, como un subrayado o 
+        un sobrerayado.*/
+
+        text-decoration-color: white;/*Define el color de la decoracion*/
+
+        text-decoration-thickness: 2px;/*establece el grosor del trazo */
+
+        text-underline-offset: 2px;/*establece la distancia de desplazamiento de una línea de
+         decoración de texto subrayado (aplicada mediante text-decoration) 
+         desde su posición original.*/
+
+        text-shadow:4px 4px 6px white;/*Añade sombra al texto*/
+
+      }
+     h1{
+        font-family: 'Pompiere', cursive;
+        color: white;
+        font-size: 60px;
+        margin-left: 5px;
+        white-space: nowrap;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: white;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
+        text-shadow:4px 3px 6px white;
+        #sack{
+            display: none;
+            color:#2029D4;
+            text-shadow:4px 3px 6px #2029D4;
+        }
+        #sahra{
+            
+            display:inline; 
+            color:red;
+            text-shadow:4px 3px 6px #8A0000;
+        }
+
+        #sahra-sack:hover #sahra{
+            display: none;
+        }
+
+        #sahra-sack:hover #sack{
+            display: inline;
+        }
+    }
+   #navegacion{
+    display:flex;
+    padding-right:100px;
+    gap:60px;
+    justify-content: space-between;
+            a{
+            font-family: 'Ribeye', cursive;
+            color: white;
+            font-size: 20px;
+            background-color: dodgerblue;
+            width:250px; 
+            height:40px;
+            
+            margin-top: 20px;
+            margin-right:0px;
+            transition: all 0.5s ease-in-out;
+            /*
+            La propiedad transition es una propiedad
+             abreviada de transition-property, transition-duration, 
+             transition-timing-function, y transition-delay. 
+             Permite definir la transición entre dos estados de un elemento.
+
+              Hay diferentes estados que pueden ser definidos utilizando 
+              pseudo-clases como :hover o :active o aplicado dinámicamente 
+              usando JavaScript.*/
+            text-shadow: 2px 2px 4px gray;
+            padding: 10px;
+            /*establece el área de relleno 
+            en los cuatro lados de un elemento a la vez.
+             es el espacio entre su contenido y su borde.   */
+           
+        }
+        a:hover{
+            transform: translateY(40PX);
+        }
+        #inicio{
+            position:relative;
+            width:100px;
+            border:thin solid black; 
+        }
+        #inicio img{
+            width:100px;
+            position:absolute;
+            top:-60px;
+            left:10px;
+            opacity:0;
+        }
+        #inicio:hover img{
+            opacity:1;
+        }
+        #galeria{
+            position:relative;
+            width:110px;
+            border:thin solid black;
+        }
+        #galeria img{
+            width:170px;
+            position:absolute;
+            top:-70px;
+            right:-110px;
+            opacity:0;
+        
+        }
+        #galeria:hover{
+            margin-right:50px;
+            margin-left:30px;
+        }
+        #galeria:hover img{
+            
+            opacity:1;
+        }
+        #historia{
+            position:relative;
+            width:120px;
+            border:thin solid black; 
+
+        }
+        #historia img{
+            width:170px;
+            position:absolute;
+            top:-70px;
+            right:-130px;
+            opacity:0;
+        }
+        #historia:hover img{
+            opacity:1;
+        }
+   }
+
+
+}
+.banner{
+    width: 100%;
+    height: 500px;
+    margin-top: 70px;
+    box-shadow:5px 10px 60px yellow;
+  
+}
+#Intro{
+    position: relative;
+    padding-left: 100px;
+    padding-right: 130px;
+    padding-bottom:100px;
+    background-image: url('imagenes/izquierda.png'), url('imagenes/abajo.png'), url('imagenes/derecha.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left  top, bottom center,right center;
+    background-size: auto 100%, 99% auto, auto 100%;
+    /*background-color: purple;*/
+    
+}
+.TextoC{
+ 
+    text-shadow: 2px 2px 4px #333333;
+    font-family: 'Indie Flower', cursive;
+    padding:10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    color:black;
+
+    max-width: 100ch;   
+
+    border: 3px dashed #333333;
+    border-radius: 20px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: fit-content;
+
+}
+
+.TextoC.right{
+    text-align: left;
+}
+.TextoC.left{
+    margin-left: auto;
+    
+    
+}
+#Explicacion{
+    padding-left:130px;
+    padding-right:130px;
+    padding-bottom:100px;
+    background-image: url('imagenes/margenlargo.png'),url('imagenes/margenlargod.png'),url(imagenes/abajo.png);
+    background-repeat: repeat-y,repeat-y,no-repeat;
+    background-position: left top,right top,bottom center;
+        background-size:
+        auto,
+        auto,
+        99% auto;
+}
+.imagentexto{
+    display: flow-root;
+}
+#Explicacion .TextoC{
+    display: flow-root;
+    max-width: 100ch;
+}
+.imagentexto img{
+    float: right;
+    margin: 0 0 12px 18px;
+    width: 350px;
+    height: auto;
+}
+#DescripcionTripleS{
+    display: flex;
+    border: 3px dashed #333333;
+    border-radius: 20px;
+    padding: 0;
+    background-color: rgba(74, 65, 70, 0.44);
+    height: 1600px;
+
+}
+.Sam{
+    text-align:left;
+    text-shadow: 
+    3px 3px 1px #0077A8,
+    3px 3px 2px #0077A8;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 20px;
+    font-size: 30px;
+    color:#85ECFF;
+    max-width: 28ch;
+    
+
+}
+.Sahra{
+    text-align:left;
+    text-shadow: 
+    2px 2px 4px rgb(119, 11, 11),
+    2px 2px 4px rgb(119, 11, 11);
+    font-family: "Pompiere", sans-serif;
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.712);
+    max-width: 28ch;
+}
+.Sahra span{
+    color:#FF0000;
+    text-shadow: 
+     2px 2px 4px rgb(0, 0, 0),
+     2px 2px 4px rgb(0, 0, 0);
+}
+.Sack{
+    text-align:left;
+    text-shadow:
+     2px 2px 4px #5969D8,
+     2px 2px 4px #5969D8;
+    font-family: "Story Script", sans-serif;
+    margin-top: 20px;
+    font-size: 30px;
+    color:#1F1E73;
+    max-width: 40ch;
+}
+.MarcoSam{
+    border: 3px dashed #85ECFF;
+    border-radius: 20px;
+    padding: 10px;
+    
+    box-shadow: 
+    0 0 10px #0077A8,
+    0 0 10px #0077A8,
+    0 0 40px#00D9FF,
+     0 0 30px rgba(0, 217, 255, 0.7);
+    background-color:#D3EAFC;
+}
+.MarcoSahra{
+    border: 3px dashed  #BD1E1E;
+    border-radius: 20px;
+    padding: 10px;
+    
+    box-shadow:
+    0 0 10px #77243C,
+    0 0 10px #77243C,
+    0 0 40px #BD1E1E,
+    0 0 30px rgba(255, 0, 0, 0.7);
+    background-color:#DE494E;
+}
+.MarcoSack{
+    border: 3px dashed  #4B55B8;
+    border-radius: 20px;
+    padding: 10px;
+    
+    box-shadow:
+    0 0 10px #30388F,
+    0 0 10px #30388F,
+    0 0 40px #5969D8,
+    0 0 30px rgba(89, 105, 216, 0.6);
+    background-color:#C5C9EA;
+}
+.linea1,
+.linea2,
+.linea3,
+.linea4 {
+    height: 360px;
+    padding: 50px;
+}
+.TextoC.botom{
+    margin-top: 20px;
+    padding:30px;
+}
+.linea2{
+    transform:translateY(50px)
+}
+.linea3{
+   transform:translateY(-50px) 
+}
+.linea4{
+    transform:translateY(-40px)
+}
+#DescripcionTripleSFOT{
+        display: flex;
+    border: 3px dashed #333333;
+    border-radius: 20px;
+    padding: 0;
+    background-color:rgba(74, 65, 70, 0.44) ;
+    height: 900px;
+
+}
+.Footer1{
+    padding-left:130px;
+    padding-right:130px;
+    padding-bottom:100px;
+    background-image: url('imagenes/margenlargo.png'),url('imagenes/margenlargod.png'),url(imagenes/abajo.png);
+    background-repeat: repeat-y,repeat-y,no-repeat;
+    background-position: left top,right top,bottom center;
+    background-size:
+    auto,
+    auto,
+    99% auto;
+   
+}
+
+footer .linea1,
+footer .linea2,
+footer .linea3,
+footer .linea4 {
+    height: 250px;
+    padding: 30px;
+    transform: none;
+    margin-bottom: 20px;
+}
+footer .linea2{
+    transform: translateY(-130px);
+}
+footer .linea3{
+    transform: translateY(-240px);
+}
+footer .linea4{
+    transform: translateY(-240px);
+}
+.Footer2 {
+    display: flex;
+    justify-content: center;
+}
+.Footer2 .Sahra{
+    padding: 100px;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-size:50px;
+}
